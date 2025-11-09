@@ -26,6 +26,13 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const container = document.getElementById("mobile-display");
+    if (container) container.scrollTo({ top: 0, behavior: "auto" });
+    else window.scrollTo({ top: 0, behavior: "auto" });
+  }, [currentPage]);
+  
+
   // función para abrir modal con sprint específico
   const handleOpenDevlog = (sprint) => {
     setSelectedSprint(sprint);

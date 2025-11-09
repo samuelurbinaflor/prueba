@@ -42,9 +42,11 @@
    .carousel { display: none; }
    .carousel-mobile { display: flex; flex-direction: column; gap: 10px; background-color: #222; }
  
-   #sidebar { width: 100%; max-width: none; padding: 30px 50px; }
+   #sidebar { width: 100%; max-width: none; padding: 30px 50px 0 !important; }
    #sidebar img { width: 50%; }
- 
+   #sidebar > div { height: fit-content;}
+   #sidebar > div > div {margin-bottom: 10px;}
+
    #rss { width: 70%; margin: 20px auto; }
    #rss > a > img { width: 50px; }
  }
@@ -54,5 +56,7 @@
    #wfb { font-size: 20px; }
    #logowfb { max-width: 100%; }
    #rss { width: 100%; }
+   #rss > a > img { width: 40px; }
+
  }
  
