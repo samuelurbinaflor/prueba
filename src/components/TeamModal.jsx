@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/team.css";
-import itch from "../assets/icons/Itch Io.png";
+import itch from "../assets/icons/ItchIo.png";
 import instagram from "../assets/icons/Instagram.png";
 
 export default function TeamModal({ open, onClose }) {

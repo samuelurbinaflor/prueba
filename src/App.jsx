@@ -16,9 +16,10 @@ import Menu from "./components/Menu.jsx";
 
 function App() {
   const [devLogsOpen, setDevLogsOpen] = useState(false);
-  const [selectedSprint, setSelectedSprint] = useState(null); // 👈 nuevo estado
+  const [selectedSprint, setSelectedSprint] = useState(null);
   const [currentPage, setCurrentPage] = useState("wfb");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  const [teamOpen, setTeamOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 700);
@@ -64,17 +65,18 @@ function App() {
             <DevLogs onOpen={handleOpenDevlog} />
           )}
           {currentPage === "carousel" && <Carousel />}
-          {currentPage === "sidebar" && <Sidebar />}
+          {currentPage === "sidebar" && <Sidebar teamOpen={teamOpen} setTeamOpen={setTeamOpen} />
+        }
         </div>
       )}
 
       {/* Menú solo visible en móvil */}
-      {isMobile && <Menu setCurrentPage={setCurrentPage} />}
+      {isMobile && <Menu setCurrentPage={setCurrentPage} setTeamOpen={setTeamOpen} />}
 
       {/* Modal */}
       <DevLogsModal
         open={devLogsOpen}
-        sprint={selectedSprint} // 👈 pasamos cuál sprint abrir
+        sprint={selectedSprint}
         onClose={() => setDevLogsOpen(false)}
       />
     </div>

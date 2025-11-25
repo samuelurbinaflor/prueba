@@ -1,5 +1,5 @@
 import React from "react";
-import itch from "../../assets/icons/Itch Io.png";
+import itch from "../../assets/icons/ItchIo.png";
 
 export default function FourthSprint() {
   return (

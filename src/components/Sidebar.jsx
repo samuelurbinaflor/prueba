@@ -6,10 +6,9 @@ import bluesky from '../assets/icons/Bluesky.png';
 import instagram from '../assets/icons/Instagram.png';
 import tiktok from '../assets/icons/TikTok.png';
 import xIcon from '../assets/icons/X.png';
-import itch from '../assets/icons/Itch Io.png';
+import itch from '../assets/icons/ItchIo.png';
 
-export default function Sidebar() {
-  const [teamOpen, setTeamOpen] = useState(false);
+export default function Sidebar({ teamOpen, setTeamOpen }) {
 
   return (
     <>

@@ -8,6 +8,7 @@ export default function DevLogsModal({ open, onClose }) {
 
   const sprints = [
     <FirstSprint />,
+    <SecondSprint/>
   ]
 
   const [current, setCurrent] = useState(0)

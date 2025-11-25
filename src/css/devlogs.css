@@ -13,7 +13,7 @@
    transition: transform 0.3s ease, box-shadow 0.3s ease;
  }
  
- #devlogs-preview:hover {
+ #devlogs:hover {
    transform: scale(1.05);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
  }
@@ -64,4 +64,12 @@
 #devlogs_body {
   padding: 0 !important;
   margin-bottom: 70px;
+}
+
+.modal-controls {
+  background-color: white;
+  color: #181818;
+  display: flex;
+  justify-content: end;
+  padding: 0 30px 10px;
 }

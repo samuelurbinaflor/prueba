@@ -10,7 +10,10 @@
   margin: 0;
   height: 100%;
 }
-
+#app.carousel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 .carousel > img {
   height: 100%;
   width: 100%;
